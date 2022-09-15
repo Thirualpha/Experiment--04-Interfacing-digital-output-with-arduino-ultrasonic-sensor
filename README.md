@@ -57,6 +57,33 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 ### PROGRAM 
 
 
+REG.NO: 212221040171
+
+NAME : THIRUMURUGAN OT
+
+```
+#define echoPin 9
+#define trigPin 10
+long duration;
+int distance;
+void setup(){
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  Serial.begin(9600);
+}
+void loop(){
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034/2;
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+}
+
+
+```
 
 
 
@@ -69,7 +96,8 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 			
 			
 
-![image](https://user-images.githubusercontent.com/36288975/190135379-52ebacd5-ccd5-460f-a4cd-4d0ad1d9b179.png)
+
+<img width="314" alt="table robo" src="https://user-images.githubusercontent.com/113031702/190428527-5a118095-c88e-45a5-9473-06060cbbc984.png">
 
 			
 			
@@ -80,14 +108,25 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
  
 
 
+              = 0.5+0.7+0.4+0.8+1.0
+          = 3.4/5
+	  =0.68
+### OUTPUT
 
 
 
 
+<img width="394" alt="circuit robo" src="https://user-images.githubusercontent.com/113031702/190429724-a00f3531-0bd2-40b3-a573-a9aa908e5812.png">
 
+
+### SERIAL MONITOR
+
+
+
+
+<img width="142" alt="slmonitor" src="https://user-images.githubusercontent.com/113031702/190429830-1f818384-3890-44a7-9a9f-ff7073539f4d.png">
 
 ### RESULTS
 
 
-
- 
+ Thus the distance value is measured in "CM" using ultrasonic sensor.
